@@ -1,2 +1,6 @@
-# react-query-cache-test
-Created with CodeSandbox
+# Example
+
+To run this example:
+
+- `npm install`
+- `npm run dev`
