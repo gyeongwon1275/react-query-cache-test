@@ -6,6 +6,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
-  background: #0b1521;
+  background: #fff;
+}
+
+a {
+  color: #0b1521;
+  text-decoration: none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+a:hover {
+  color: blue;
 }
