@@ -1,2 +1,2 @@
-export * from "./useAnimals";
-export * from "./useStocks";
+export * from "./useRetriever";
+export * from "./usePoodle";

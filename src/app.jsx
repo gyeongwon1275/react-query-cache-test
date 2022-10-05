@@ -1,16 +1,22 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 import { Route, Routes } from "react-router-dom";
-import { Animal, Stock, Home } from "./pages";
+import { Retriever, Home, Poodle } from "./pages";
 
 export const App = () => {
   return (
     <main>
-      <h1>React Query Cache</h1>
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/animal" element={<Animal />} />
-        <Route path="/stock" element={<Stock />} />
+        <Route path="/retriever" element={<Retriever />} />
+        <Route
+          path="/poodle"
+          element={
+            <Suspense fallback={<div>Poodle is loading...</div>}>
+              <Poodle />
+            </Suspense>
+          }
+        />
         <Route path="*" element={<Home />} />
       </Routes>
     </main>

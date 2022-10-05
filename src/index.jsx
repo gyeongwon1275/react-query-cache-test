@@ -11,21 +11,14 @@ import { BrowserRouter } from "react-router-dom";
 
 const queryClient = new QueryClient();
 
-const prepareMSW = async () => {
-  const { worker } = await import("./mocks/browser");
-  await worker.start();
-};
-
-prepareMSW().then(() => {
-  ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>
-      <QueryClientProvider client={queryClient}>
-        <ReactQueryDevtools initialIsOpen={false} />
-        <BrowserRouter>
-          <Header />
-          <App />
-        </BrowserRouter>
-      </QueryClientProvider>
-    </React.StrictMode>
-  );
-});
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false} />
+      <BrowserRouter>
+        <Header />
+        <App />
+      </BrowserRouter>
+    </QueryClientProvider>
+  </React.StrictMode>
+);
